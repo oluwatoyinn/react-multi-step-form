@@ -19,6 +19,17 @@ export const endSuffix=()=>([
     {id:'5', initial:'IV'},
 ])
 
+export const credentialType=()=>([
+    {id:'1', initial:"ECOWAS"},
+    {id:'1', initial:"PASSPORT"},
+    {id:'1', initial:"NIN NUMBER"},
+])
+
+export const dataMeans =()=>([
+    {id:'1', initial:'SMS'},
+    {id:'1', initial:'Email'},
+])
+
 export const country=() =>(
     [ 
         {name: 'Afghanistan', code: 'AF'}, 

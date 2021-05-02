@@ -6,7 +6,7 @@ import {makeStyles } from '@material-ui/core'
 const useStyles = makeStyles(theme=>({
     root:{
        '& .MuiFormControl-root':{
-           width:'80%',
+           width:'100%',
            margin:theme.spacing(1)
        }
     }

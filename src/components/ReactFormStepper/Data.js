@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import {FormControl, Typography,FormControlLabel,FormLabel,Radio, RadioGroup, Button, Icon} from '@material-ui/core';
+import {FormControl, Typography,FormControlLabel,FormLabel,Radio, RadioGroup, Button, Icon, makeStyles} from '@material-ui/core';
 import IntlTelInput from 'react-intl-tel-input';
 import 'react-intl-tel-input/dist/main.css';
 // import Icon from '@material-ui/core/Icon';
@@ -16,36 +13,18 @@ import CustomButton from '../CustomControls/CustomButton'
 import * as pre from '../Prefix/Prefix'
 import CustomSelect from "../CustomControls/CustomSelect";
 import Customdatepicker from "../CustomControls/CustomDatePicker";
-import Axios from 'axios'
-
+// import Axios from 'axios'
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    paddingBottom:'60px',
-    // alignContent:'center'
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  title: {
-    fontSize: 27,
-    padding:'15px',
-    fontWeight:600,
-    textAlign:'center'
-  },
-//   selectPadding:{
-//     paddingTop:'70px',
-//   },
-  button: {
-    margin: theme.spacing(1),
-    float:'right'
-  },
-}));
+    title: {
+      fontSize: 27,
+      padding:'15px',
+      fontWeight:600,
+      textAlign:'center'
+    },
+  }));
 
-export default function CenteredGrid() {
+export default function Data() {
 
     const initialState={
         prefix:'',
@@ -58,28 +37,11 @@ export default function CenteredGrid() {
         pob:'',
       }
 
-    const classes = useStyles();
+      const classes = useStyles()
     const [values, setValues] = useState(initialState)
     const {prefix,firstName,lastName,middleName,suffix,gender,dob,pob} = values
 
-    
-    useEffect(()=>{
-        Axios.get('https://restcountries.eu/rest/v2/all')
-        .then(res=>{
-            const datas = res.data
-            let countryData = res.data[0]
-            setValues({country:countryData.name})
-            
-            console.log('response from main api :', res);
-            console.log('Single country :',datas);
-            console.log('data: ', countryData );
-            
-            // const names = datas.map(country =><div>
-            //     {country.name}
-            // </div> )
 
-        })
-      },[])
 
     const handleChange =(e)=>{
         const {name, value} = e.target
@@ -90,8 +52,8 @@ export default function CenteredGrid() {
         }
 
     return (
-        <div>
-                <Card className={classes.root}>
+        <React.Fragment>
+                <Card >
                     <CardContent >
                         <Typography className={classes.title} color="textSecondary" gutterBottom>
                             Biographical Data
@@ -170,6 +132,6 @@ export default function CenteredGrid() {
                             </CustomForm>
                     </CardContent>
                 </Card>
-        </div>
+        </React.Fragment>
     );
   }

@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Register from './components/Register';
+import Register2 from "./components/FormStages/Register2";
+import Address from "./components/FormStages/Address";
+import Credentials from "./components/FormStages/Credentials";
 import Header from "./components/Header";
-import Register2 from "./components/Register2";
-import {CssBaseline, makeStyles} from "@material-ui/core";
+import {Route} from "react-router-dom";
+import StepperForm from "./components/FormStages/StepperForm";
 import FormStepper from "./components/bin/Step";
-
-const useStyles = makeStyles(theme=>({
-  root: {
-    flexGrow: 1,
-  },
-}))
+import MuiStepper from "./components/ReactFormStepper/MuiStepper"
 
 function App() {
   return (
-    <div className="App" >
-      <Header />
-      <Register2  />
-      <FormStepper />
+    <div>
+        <div className="App" >
+          <Header />
+          {/* <Route path="/home" component={StepperForm}/>
+          <Route path="/" component={FormStepper} /> */}
+          <Route path="/sub" component={MuiStepper} />
+        </div>
     </div>
+   
   );
 }
 
