@@ -71,17 +71,20 @@ export default function Data() {
                                         <CustomFields 
                                             name="firstName"
                                             label="First Name"
-                                            value={firstName}    
+                                            value={firstName}  
+                                            onChange={handleChange}
                                         />
                                         <CustomFields 
-                                            name="firstName"
+                                            name="lastName"
                                             label="Last Name"
-                                            value={lastName}    
+                                            value={lastName}  
+                                            onChange={handleChange}
                                         />
                                         <CustomFields 
-                                            name="firstName"
+                                            name="middleName"
                                             label="Middle Name"
-                                            value={middleName}    
+                                            value={middleName}
+                                            onChange={handleChange}
                                         />
                                     </Grid>
                                     <Grid item xs={6}>

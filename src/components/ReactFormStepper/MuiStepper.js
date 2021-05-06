@@ -14,6 +14,8 @@ import Data from "./Data";
 import CurrentAddress from "./CurrentAddress";
 import Credential from "./Credential";
 import CheckEntries from "./CheckEntries";
+import FormikInitialValues from "./FormModel/FormikInitialValues";
+import ReviewFormModel from "./FormModel/ReviewFormModel";
 // import StepperIcons from "./StepIcons";
 // import StepConnector from './StepConnector'
 
@@ -68,11 +70,12 @@ const getSteps =() =>{
   }
   
 const steps = getSteps()
+const {formField, formId} = ReviewFormModel
 
 const getStepContent=(step)=> {
     switch (step) {
       case 0:
-        return <Data />;
+        return <Data formField={formField} />;
       case 1:
         return <CurrentAddress />;
       case 2:

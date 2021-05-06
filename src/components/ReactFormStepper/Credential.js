@@ -62,11 +62,13 @@ export default function Credentials() {
                                             label="Reference Credential Type"
                                             value={values.credentialType}
                                             options={prefix.credentialType()}
+                                            onChange={handleChange}
                                         />
                                         <CustomFields 
                                             name="credentialIdNumber"
                                             label="Credential ID Number"
-                                            value={values.credentialIdNumber}    
+                                            value={values.credentialIdNumber}  
+                                            onChange={handleChange}
                                         />
                                     </Grid>
                                     <Grid item xs={6} >
@@ -74,6 +76,7 @@ export default function Credentials() {
                                             name="dateOfIssue"
                                             label="Date of Issue"
                                             value={values.dateOfIssue}
+                                            onChange={handleChange}
                                             fullWidth
                                         />
                                     </Grid>
@@ -82,6 +85,7 @@ export default function Credentials() {
                                             name="dateOfExpiration"
                                             label="Date of Expiration"
                                             value={values.dateOfExpiration}
+                                            onChange={handleChange}
                                             fullWidth
                                         />
                                     </Grid>

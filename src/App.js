@@ -14,9 +14,9 @@ function App() {
     <div>
         <div className="App" >
           <Header />
-          {/* <Route path="/home" component={StepperForm}/>
-          <Route path="/" component={FormStepper} /> */}
-          <Route path="/sub" component={MuiStepper} />
+          {/* <Route path="/home" component={StepperForm}/> */}
+          {/* <Route path="/" component={FormStepper} /> */}
+          <Route path="/" component={MuiStepper} />
         </div>
     </div>
    

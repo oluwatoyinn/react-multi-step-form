@@ -57,32 +57,38 @@ export default function CurrentAddress() {
                                         <CustomFields 
                                             name="address"
                                             label="Address"
-                                            value={values.address}    
+                                            value={values.address} 
+                                            onChange={handleChange}
                                         />
                                         <CustomFields 
                                             name="suite"
                                             label="App/Suite"
-                                            value={values.suite}    
+                                            value={values.suite}
+                                            onChange={handleChange}
                                         />
                                         <CustomFields 
                                             name="city"
                                             label="City"
-                                            value={values.city}    
+                                            value={values.city} 
+                                            onChange={handleChange}
                                         />
                                          <CustomFields 
                                             name="state"
                                             label="State/Province"
-                                            value={values.state}    
+                                            value={values.state}  
+                                            onChange={handleChange}
                                         />
                                          <CustomFields 
                                             name="postalCode"
                                             label="Postal Code"
-                                            value={values.postalCode}    
+                                            value={values.postalCode}
+                                            onChange={handleChange}
                                         />
                                          <CustomFields 
                                             name="emailAddress"
                                             label="Email Address"
-                                            value={values.emailAddress}    
+                                            value={values.emailAddress} 
+                                            onChange={handleChange}
                                         />
                                     </Grid>
                                 </Grid>
