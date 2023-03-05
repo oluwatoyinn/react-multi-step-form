@@ -4,7 +4,7 @@ import DateFnsUtils from '@date-io/date-fns'
 
 export default function Customdatepicker(props) { 
 
-    const {name, label, onChange, value} = props
+    const {name, label} = props
 
     const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
 

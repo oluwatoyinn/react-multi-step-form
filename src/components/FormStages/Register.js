@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Typography, Grid,makeStyles, Paper} from '@material-ui/core'
+import {Typography, Grid, Paper} from '@material-ui/core'
 import CustomSelect from "../CustomControls/CustomSelect";
 import * as prefix from '../Prefix/Prefix'
 
@@ -20,15 +20,15 @@ const Register=(props)=> {
   }
 
   // const classes = useStyles();
-  const [values, setValues] = useState(initialState)
+  const [values] = useState(initialState)
 
-  const handleChange =(e)=>{
-    const {name, value} = e.target
-    setValues({
-        ...values,
-        [name]:value
-    })
-    }
+  // const handleChange =(e)=>{
+  //   const {name, value} = e.target
+  //   setValues({
+  //       ...values,
+  //       [name]:value
+  //   })
+  //   }
 
   return (
     <React.Fragment>

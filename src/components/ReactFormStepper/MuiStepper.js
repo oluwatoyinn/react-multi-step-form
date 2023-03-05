@@ -5,8 +5,8 @@ import {
     Step,
     StepLabel,
     Button,
-    Box,
-    Grid,
+    // Box,
+    // Grid,
     Typography,
     Paper
 } from '@material-ui/core';
@@ -14,7 +14,7 @@ import Data from "./Data";
 import CurrentAddress from "./CurrentAddress";
 import Credential from "./Credential";
 import CheckEntries from "./CheckEntries";
-import FormikInitialValues from "./FormModel/FormikInitialValues";
+// import FormikInitialValues from "./FormModel/FormikInitialValues";
 import ReviewFormModel from "./FormModel/ReviewFormModel";
 // import StepperIcons from "./StepIcons";
 // import StepConnector from './StepConnector'

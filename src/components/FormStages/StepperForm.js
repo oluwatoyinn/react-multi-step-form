@@ -3,7 +3,6 @@ import { Stepper,Step,StepLabel,Typography, Button, makeStyles } from "@material
 import Register2 from "../FormStages/Register2";
 import Credentials from "../FormStages/Credentials";
 import Address from "../FormStages/Address";
-import CustomButton from "../CustomControls/CustomButton";
 
 const useStyles =makeStyles({
     root:{

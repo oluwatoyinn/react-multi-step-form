@@ -1,6 +1,5 @@
 import React from 'react'
 import { FormControl, Select, MenuItem,InputLabel, FormHelperText, makeStyles } from '@material-ui/core'
-import Axios from "axios";
 
 
 export default function CustomSelect(props) {
